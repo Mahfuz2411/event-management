@@ -1,12 +1,13 @@
-
+import { Link } from "react-router-dom";
+import { BsGoogle } from "react-icons/bs";
 
 const SignIn = () => {
   return (
     <>
-      <div className="hero min-h-screen bg-base-200">
+      <div className="w-full max-w-sm lg:max-w-3xl mx-auto hero min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
-          <div className="text-center lg:text-left">
-            <h1 className="text-5xl font-bold">Login now!</h1>
+          <div className="w-full px-5 text-center lg:text-left">
+            <h1 className="text-3xl md:text-5xl font-bold">Login now!</h1>
             <p className="py-6">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
@@ -16,36 +17,34 @@ const SignIn = () => {
           <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
             <form className="card-body">
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Email</span>
-                </label>
                 <input
                   type="email"
-                  placeholder="email"
+                  placeholder="Email"
                   className="input input-bordered"
                   required
                 />
               </div>
               <div className="form-control">
-                <label className="label">
-                  <span className="label-text">Password</span>
-                </label>
                 <input
                   type="password"
-                  placeholder="password"
+                  placeholder="Password"
                   className="input input-bordered"
                   required
                 />
-                <label className="label">
-                  <a href="#" className="label-text-alt link link-hover">
-                    Forgot password?
-                  </a>
-                </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button className="btn btn-primary">Log In</button>
+                <label className="label">
+                  <Link to="/signup" className="label-text-alt link link-hover">
+                    Create an account?
+                  </Link>
+                </label>
               </div>
             </form>
+            <p  className="label-text-alt text-center">---or---</p>
+            <button className="btn btn-primary mx-7 my-3">
+              <BsGoogle /> Sign Up with Google
+            </button>
           </div>
         </div>
       </div>

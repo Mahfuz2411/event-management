@@ -1,18 +1,20 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Header = () => {
+  const [user, setUser] = useState(null);
   const links = (
     <>
       <li>
         <NavLink to="/">
-          <a>Home</a>
+          Home
         </NavLink>
       </li>
     </>
   );
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="container mx-auto navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -46,7 +48,13 @@ const Header = () => {
           </ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          {
+            user?
+            <button onClick={()=>setUser(null)}>Sign Out</button>:
+            <NavLink to="/signin">
+              <button>Sing In</button>
+            </NavLink>
+          }
         </div>
       </div>
     </div>
