@@ -12,6 +12,7 @@ import Error from './error/Error.jsx';
 import Home from './Home/Home.jsx';
 import SignIn from './auth/SignIn.jsx';
 import SignUp from './auth/SignUp.jsx';
+import Details from './Home/Details.jsx';
 
 const router = createBrowserRouter([
   {
@@ -20,12 +21,16 @@ const router = createBrowserRouter([
     errorElement: <Error></Error>,
     children: [
       {
-        path: "/home",
+        path: "/",
         element: <Home></Home>
       },
       {
         path: "/signin",
         element: <SignIn></SignIn>
+      },
+      {
+        path: "/details/:id",
+        element: <Details></Details>
       },
       {
         path: "/signup",

@@ -5,11 +5,11 @@ import Footer from "./basic-compo/Footer"
 function App() {
 
   return (
-    <>
+    <div>
       <Header></Header>
       <Outlet></Outlet>
       <Footer></Footer>
-    </>
+    </div>
   )
 }
 

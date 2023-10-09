@@ -6,9 +6,10 @@ const Header = () => {
   const links = (
     <>
       <li>
-        <NavLink to="/">
-          Home
-        </NavLink>
+        <NavLink to="/">Home</NavLink>
+      </li>
+      <li>
+        <NavLink to="/profile">Profile</NavLink>
       </li>
     </>
   );
@@ -40,21 +41,19 @@ const Header = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">daisyUI</a>
+          <a className="btn btn-ghost normal-case text-xl">CulturalCanvas</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
-            {links}
-          </ul>
+          <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
-          {
-            user?
-            <button onClick={()=>setUser(null)}>Sign Out</button>:
+          {user ? (
+            <button onClick={() => setUser(null)}>Sign Out</button>
+          ) : (
             <NavLink to="/signin">
               <button>Sing In</button>
             </NavLink>
-          }
+          )}
         </div>
       </div>
     </div>

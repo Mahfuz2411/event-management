@@ -1,0 +1,56 @@
+[
+  {
+    "type": "Music Festival",
+    "description": "Experience the magic of live music from a diverse range of genres, featuring local and international artists. Dance to the rhythm, enjoy food and drinks, and immerse yourself in a vibrant musical atmosphere.",
+    "featured_location": "Outdoor amphitheater",
+    "duration": "2-3 days",
+    "ticket_price_range": "$20 - $150",
+    "img": "https://i.ibb.co/nkzWBnH/musicfest.jpg"
+  },
+  {
+    "type": "Art Exhibition",
+    "description": "Explore a world of creativity and expression through visual arts. View stunning paintings, sculptures, and multimedia installations from talented artists, both established and emerging.",
+    "featured_location": "Art gallery",
+    "duration": "1-2 weeks",
+    "ticket_price_range": "Free admission",
+    "img": "https://i.ibb.co/XSHDgbV/arrgall.jpg"
+  },
+  {
+    "type": "Culinary Showcase",
+    "description": "Indulge your taste buds in a culinary adventure. Sample a wide array of delicious dishes from around the world, prepared by skilled chefs and culinary enthusiasts.",
+    "featured_location": "Food festival grounds",
+    "duration": "1-3 days",
+    "ticket_price_range": "$10 - $50",
+    "img": "https://i.ibb.co/8x64Njt/culinaryshowcase.jpg"
+  },
+  {
+    "type": "Cultural Celebration",
+    "description": "Participate in the rich traditions and festivities of different cultures. Enjoy performances, rituals, and cultural activities that showcase the diversity of our world.",
+    "featured_location": "Community center",
+    "duration": "1 day",
+    "ticket_price_range": "Free admission",
+    "img": "https://i.ibb.co/tQP1kNN/filmfestival.jpg"
+  },
+  {
+    "type": "New Year Celebration",
+    "description": "Ring in the new year with a spectacular celebration! Join us for music, fireworks, and festivities as we welcome a fresh start together.",
+    "featured_location": "City center",
+    "duration": "1 night",
+    "ticket_price_range": "$25 - $100",
+    "img": "https://i.ibb.co/ByGm8gB/newyear.jpg"
+  },
+  {
+    "type": "Craft Fair",
+    "description": "Explore handmade crafts, artworks, and artisanal products. Support local artisans and find unique, one-of-a-kind items that reflect the creativity of the community.",
+    "featured_location": "Outdoor market",
+    "duration": "1-2 days",
+    "ticket_price_range": "Free admission",
+    "img": "https://i.ibb.co/sCGBzKt/craftfair.jpg"
+  }
+]
+
+
+
+
+
+
