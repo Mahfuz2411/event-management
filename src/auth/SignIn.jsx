@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
 import { BsGoogle } from "react-icons/bs";
+import { getAuth } from "firebase/auth";
+import app from "../firebase/firebase.config";
+
+const auth = getAuth(app);
 
 const SignIn = () => {
   return (

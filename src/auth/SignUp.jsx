@@ -1,9 +1,33 @@
 import { Link } from "react-router-dom";
 import { BsGoogle } from "react-icons/bs";
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
+import app from "../firebase/firebase.config";
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { useState } from "react";
+
+const auth = getAuth(app);
+const provider = new GoogleAuthProvider();
 
 const SignUp = () => {
+  const [user, setUser]  = useState(null);
+
+  const handleSingUpWithGoogle = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        setUser(result.user);
+        console.log("user", user);
+        toast("Successfully logged in");
+      })
+      .catch((error) => {
+        toast(error.message);
+      });
+  };
+
   return (
     <>
+    <ToastContainer />
       <div className="w-full max-w-sm lg:max-w-3xl mx-auto hero min-h-screen">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div className="w-full px-5 text-center lg:text-left">
@@ -57,8 +81,8 @@ const SignUp = () => {
                 </label>
               </div>
             </form>
-            <p  className="label-text-alt text-center">---or---</p>
-            <button className="btn btn-primary mx-7 my-3">
+            <p className="label-text-alt text-center">---or---</p>
+            <button onClick={ handleSingUpWithGoogle } className="btn btn-primary mx-7 my-3">
               <BsGoogle /> Sign Up with Google
             </button>
           </div>
