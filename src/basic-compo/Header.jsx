@@ -1,8 +1,10 @@
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../Context/AuthProvider";
 
 const Header = () => {
-  const [user, setUser] = useState(null);
+  const { user, logOut } = useContext(AuthContext);
+  const navigat = useNavigate();
   const links = (
     <>
       <li>
@@ -11,10 +13,13 @@ const Header = () => {
       <li>
         <NavLink to="/profile">Profile</NavLink>
       </li>
+      <li>
+        <NavLink to="/jobs">Jobs</NavLink>
+      </li>
     </>
   );
   return (
-    <div>
+    <>
       <div className="container mx-auto navbar bg-base-100">
         <div className="navbar-start">
           <div className="dropdown">
@@ -41,22 +46,33 @@ const Header = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">CulturalCanvas</a>
+          <Link to="/" className="normal-case text-xl">
+            CulturalCanvas
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end">
           {user ? (
-            <button onClick={() => setUser(null)}>Sign Out</button>
+            <div className="flex justify-center items-center gap-2">
+              <button onClick={() => logOut()}>Sign Out</button>
+              <Link to="/profile" className="rounded-full bg-slate-900 outline-0 overflow-hidden">
+                <img
+                  src={user.photoURL}
+                  alt=""
+                  className="w-10 h-10 object-cover cursor-pointer"
+                />
+              </Link>
+            </div>
           ) : (
-            <NavLink to="/signin">
+            <Link to="/signin">
               <button>Sing In</button>
-            </NavLink>
+            </Link>
           )}
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 const WhatWe = () => {
   return (
-    <section className="container py-10 mx-auto grid gap-5 w-full">
+    <section className="container py-10 mx-auto grid gap-5 w-full px-5">
       <h2 className="text-center font-bold text-4xl">What We Are</h2>
       <div className="grid md:grid-cols-2 m-auto gap-5 w-full">
         <div className="card bg-base-100 shadow-xl w-full">
