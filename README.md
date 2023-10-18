@@ -1,4 +1,3 @@
-Code Link: https://github.com/programming-hero-web-course-4/b8a9-event-management-Mahfuz2411
 Live Link: https://event-management-b4c54.web.app/
 
 features
